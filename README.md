@@ -1,2 +1,1 @@
-# W1
-Blockchian class W1
+欧科定向培训作业
