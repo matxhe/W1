@@ -17,8 +17,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -497,7 +496,7 @@
   "sourceMap": "62:155:0:-:0;;;113:41;;;;;;;;;;145:1;137:7;:9;;;;62:155;;;;;;",
   "deployedSourceMap": "62:155:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:52;;;:::i;:::-;;85:19;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;162:52;197:7;;:9;;;;;;;;;:::i;:::-;;;;;;162:52::o;85:19::-;;;;:::o;7:77:2:-;44:7;73:5;62:16;;7:77;;;:::o;90:118::-;177:24;195:5;177:24;:::i;:::-;172:3;165:37;90:118;;:::o;214:222::-;307:4;345:2;334:9;330:18;322:26;;358:71;426:1;415:9;411:17;402:6;358:71;:::i;:::-;214:222;;;;:::o;442:180::-;490:77;487:1;480:88;587:4;584:1;577:15;611:4;608:1;601:15;628:233;667:3;690:24;708:5;690:24;:::i;:::-;681:33;;736:66;729:5;726:77;723:103;;;806:18;;:::i;:::-;723:103;853:1;846:5;842:13;835:20;;628:233;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\ncontract Counter{\r\n    uint public counter;\r\n\r\n    constructor(){\r\n        counter=0;\r\n    }\r\n\r\n    function count() public {\r\n        counter++;\r\n    }\r\n}",
-  "sourcePath": "D:\\BlockChainTrainning\\W1\\w1_code\\contracts\\Counter.sol",
+  "sourcePath": "D:\\BlockChainTrainning\\homework\\homework\\W1\\w1_code\\contracts\\Counter.sol",
   "ast": {
     "absolutePath": "project:/contracts/Counter.sol",
     "exportedSymbols": {
@@ -949,8 +948,7 @@
     }
   },
   "schemaVersion": "3.4.5",
-  "updatedAt": "2022-02-23T19:35:28.705Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-02-24T11:39:46.553Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
