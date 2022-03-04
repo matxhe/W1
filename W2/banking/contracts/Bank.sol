@@ -7,7 +7,7 @@ contract Bank {
     address payable public owner;
 
     // A mapping is a key/value map. Here we store each account balance.
-    mapping(address => uint) public balances;
+    mapping(address => uint) balances;
 
     constructor() {
         owner = payable(msg.sender);
@@ -19,20 +19,23 @@ contract Bank {
         console.log("caller address:'%s', value is '%s'", msg.sender, msg.value);
     }
 
-    function withdraw(uint _amount) external {
+    function withdrawSome(uint _amount) external {
         // require(msg.sender == owner, "caller is not owner");
         require(balances[msg.sender] - _amount > 0,"Insufficient Balance!");
         payable(msg.sender).transfer(_amount);
+        balances[msg.sender] = getBalance();
     }
 
-    function withdrawAll() external {
+    function withdraw() external {
         // require(msg.sender == owner, "caller is not owner");
         require(balances[msg.sender] > 0,"Insufficient Balance!");
-        payable(msg.sender).transfer(balances[msg.sender]);
+        //payable(msg.sender).transfer(balances[msg.sender]);
+        address payable to = payable(msg.sender);
+        to.transfer(getBalance());
+        balances[msg.sender] = getBalance();
     }
 
-    function getBalance() external view returns (uint) {
-        //return address(this).balance;
-        return balances[msg.sender];
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
     }
 }

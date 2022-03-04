@@ -24,11 +24,15 @@ module.exports = {
   solidity: "0.8.4",
   networks:{
     hardhat:{
-      chainId:1337
+      chainId:1337,
+      gas: 2100000,
+      gasPrice: 8000000000
     },
     ropsten: {
       url: "https://ropsten.infura.io/v3/890a9bd025d54a7da8d7ba259d5d5df9",
-      accounts: [`0x${privateKey}`]
+      accounts: [`0x${privateKey}`],
+      gas: 2100000,
+      gasPrice: 8000000000
     }
   },
   etherscan: {

@@ -8,17 +8,18 @@ async function main() {
     
     //console.log("owner:", owner);
     
-    const bank = await ethers.getContractAt("Bank","0x2970d5D97AfE69Ef727Bb200b24edeA26deCBb25",owner);
+    const bank = await ethers.getContractAt("Bank","0xfeA7AB8b96E68b87892cE60E74919a909A3c73a7",owner);
 
     let balance = await bank.getBalance();
     console.log(owner.address +" contract balance is:" + balance);
 
-    // // withdraw eth
-    // const transaction = await bank.withdrawAll();
-    // await transaction.wait();
+    // withdraw eth
+    const transaction = await bank.withdraw();
+    await transaction.wait();
+    console.log(owner.address +" withdraw all ETH!");
 
-    // let newbalance = await bank.getBalance();
-    // console.log(owner.address +" contract new balance is:" + newbalance);
+    let newbalance = await bank.getBalance();
+    console.log(owner.address +" contract new balance is:" + newbalance);
 
 }
 
