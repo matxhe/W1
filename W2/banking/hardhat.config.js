@@ -1,4 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
+
 const fs = require('fs');
 const privateKey = fs.readFileSync(".secret").toString().trim();
 const scankey = '3E66SQH58TVPZHKA4Q7UMDI4HVXBYJUCKP';
