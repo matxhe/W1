@@ -1,89 +1,45 @@
-欧科定向培训作业
+# 欧科定向培训作业
+# W2_1作业：
 
-W1:
-counter contract hash: 0x116f5aCFDeC56DA786DD7749DF5c39143b8e9cB2
+* 编写⼀个Bank合约：
 
+Contract Address: 0xfeA7AB8b96E68b87892cE60E74919a909A3c73a7
 
-transation Hash: A904874F1EC27DF0C32189C5014E6B83C7B14D7B010FD9AE912DE26381CD6ACB
+* 通过 Metamask 向Bank合约转账ETH
 
-OEC Explorer: https://www.oklink.com/en/oec-test/address/0xd21EdEAA807A072ee96B97a39B351499355aE93c
-
-
-
-
-PS D:\BlockChainTrainning\W1\w1_code> truffle migrate --network ropsten
-
-Compiling your contracts...
-===========================
-> Compiling .\contracts\Counter.sol
-> Compiling .\contracts\Migrations.sol
-> Artifacts written to D:\BlockChainTrainning\W1\w1_code\build\contracts
-> Compiled successfully using:
-   - solc: 0.8.11+commit.d7f03943.Emscripten.clang
+Trx HASH: 0xad6e50c3bf24010ee0d6829b1402703545051eb05b4262fffd25a188e9a90b3a
 
 
-Starting migrations...
-======================
-> Network name:    'ropsten'
-> Network id:      3
-> Block gas limit: 8000000 (0x7a1200)
+* 在Bank合约记录每个地址转账⾦额
+* 编写 Bank合约withdraw(), 实现提取出所有的 ETH
+
+Trx HASH:0xad6e50c3bf24010ee0d6829b1402703545051eb05b4262fffd25a188e9a90b3a
 
 
-1_initial_migration.js
-======================
+https://ropsten.etherscan.io/tx/0xad6e50c3bf24010ee0d6829b1402703545051eb05b4262fffd25a188e9a90b3a
 
-   Deploying 'Migrations'
-   ----------------------
-   > transaction hash:    0xc0e7d957da92ef49ef5dad32029101210f2137d3c4f4ddcd14a4e7c8ac44488e
-   > Blocks: 7            Seconds: 161
-   > contract address:    0xBbc7C30218f2c5079b2E53913499CB0Ebf82a316
-   > block number:        12008571
-   > block timestamp:     1645644408
-   > account:             0xd21EdEAA807A072ee96B97a39B351499355aE93c
-   > balance:             0.999586048796441158
-   > gas used:            250142 (0x3d11e)
-   > gas price:           1.654864851 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000413951203558842 ETH
-
-   Pausing for 2 confirmations...
-
-   -------------------------------
-   > confirmation number: 1 (block: 12008572)
-   > confirmation number: 2 (block: 12008573)
-   > Saving migration to chain.
-   > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.000413951203558842 ETH
+https://ropsten.etherscan.io/address/0x2970d5d97afe69ef727bb200b24edea26decbb25
 
 
-2_deploy_contracts.js
-=====================
+# W2_2作业
+* 编写合约Score，⽤于记录学⽣（地址）分数：
 
-   Deploying 'Counter'
-   -------------------
-   > transaction hash:    0xbbaa87a1e4104b64f275611206df15d15f0fe50ba354c29dfedf48ceff80b102
-   > Blocks: 13           Seconds: 230
-   > contract address:    0xF9323cA61653D22B0725fda80e3BA8C29CC6Ac3D
-   > block number:        12008589
-   > block timestamp:     1645644708
-   > account:             0xd21EdEAA807A072ee96B97a39B351499355aE93c
-   > balance:             0.999307839028005974
-   > gas used:            132053 (0x203d5)
-   > gas price:           1.551925446 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000204936410920638 ETH
+   * 仅有⽼师（⽤modifier权限控制）可以添加和修改学⽣分数
 
-   Pausing for 2 confirmations...
+    modifier OnlyTeacher(){
+    require(msg.sender == teacher, "Teacher Only!");
+    _;
+    }
 
-   -------------------------------
-   > confirmation number: 2 (block: 12008591)
-   > Saving migration to chain.
-   > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.000204936410920638 ETH
+   * 分数不可以⼤于 100；
 
-Summary
-=======
-> Total deployments:   2
-> Final cost:          0.00061888761447948 ETH
+   modifier CannotMoreThan100(address studentAddr){
+         _;
+        require(getScore(studentAddr) <= 100, "Cannot more than hundred!");
+    } 
+    
+* 编写合约 Teacher 作为⽼师，通过 IScore 接⼝调⽤修改学⽣分数。
+
+    function updateStudentScore(address score, address studentAddr, uint8 points) public{
+        IScore(score).updateScore(studentAddr, points);
+    }
