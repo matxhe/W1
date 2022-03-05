@@ -13,13 +13,23 @@ Trx HASH: 0xad6e50c3bf24010ee0d6829b1402703545051eb05b4262fffd25a188e9a90b3a
 * 在Bank合约记录每个地址转账⾦额
 * 编写 Bank合约withdraw(), 实现提取出所有的 ETH
 
+npx hardhat run .\scripts\bank.js --network ropsten
+
 Trx HASH:0xad6e50c3bf24010ee0d6829b1402703545051eb05b4262fffd25a188e9a90b3a
 
 
 https://ropsten.etherscan.io/tx/0xad6e50c3bf24010ee0d6829b1402703545051eb05b4262fffd25a188e9a90b3a
 
-https://ropsten.etherscan.io/address/0x2970d5d97afe69ef727bb200b24edea26decbb25
+https://ropsten.etherscan.io/address/0xfeA7AB8b96E68b87892cE60E74919a909A3c73a7
 
+npx hardhat verify 0xfeA7AB8b96E68b87892cE60E74919a909A3c73a7 --network ropsten                                      
+Compiled 1 Solidity file successfully
+Successfully submitted source code for contract
+contracts/Bank.sol:Bank at 0xfeA7AB8b96E68b87892cE60E74919a909A3c73a7
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Bank on Etherscan.
+https://ropsten.etherscan.io/address/0xfeA7AB8b96E68b87892cE60E74919a909A3c73a7#code
 
 # W2_2作业
 * 编写合约Score，⽤于记录学⽣（地址）分数：
