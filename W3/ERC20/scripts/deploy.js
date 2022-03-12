@@ -14,6 +14,8 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
+
+  // ERC20
   const GGToken = await hre.ethers.getContractFactory("GGToken");
   const totalToken = hre.ethers.utils.parseUnits("0",18);
   const ggToken = await GGToken.deploy(totalToken);
@@ -28,6 +30,14 @@ async function main() {
   await vault.deployed();
 
   console.log("Vault deployed to:", vault.address);
+
+  // ERC721
+  const GGNFT = await hre.ethers.getContractFactory("GGNFT");
+  const ggNFT = await GGNFT.deploy();
+
+  await ggNFT.deployed();
+
+  console.log("GG NFT deployed to:", ggNFT.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
