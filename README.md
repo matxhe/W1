@@ -1,4 +1,26 @@
 # 欧科定向培训作业
+
+# W3作业：
+
+## Introduction
+
+用ReactJs + esthers.Js 简单实现ERC20，ERC721与用户互动（授权，转帐，铸币，提现）作用
+
+演示：https://matxhe.github.io/homework/
+
+截图：
+## ERC20
+
+![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC20%20Dapp%20screen.png)
+![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC20%20Dapp%20Approve%20screen.png)
+![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC20%20Dapp%20Deposit%20screen.png)
+![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC20%20Withdraw%20screen.png)
+![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC20%20Withdraw%20succeed%20screen.png)
+
+## ERC721
+![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC721%20Transfer%20event.png)
+
+
 # W2_1作业：
 
 * 编写⼀个Bank合约：
