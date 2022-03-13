@@ -1,4 +1,5 @@
 node_modules
 package-lock.json
-W1/w1_code/.secret
+.secret
 *.code-workspace
+dbConfig.js

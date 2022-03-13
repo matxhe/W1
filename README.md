@@ -20,6 +20,13 @@
 ## ERC721
 ![Screenshot](https://github.com/matxhe/homework/blob/main/W3/ERC721%20Transfer%20event.png)
 
+部署到ropsten， https://ropsten.etherscan.io/address/0xd21edeaa807a072ee96b97a39b351499355ae93c
+
+npx hardhat run .\scripts\deploy.js --network ropsten
+         GGToken deployed to: 0xED580c3bA68242B0A9906910B7AeA5b4ea5F2Fe0
+         Vault deployed to: 0xD520a6394628149B607b35f75e6321F19FbbAca7
+         GG NFT deployed to: 0x310c83E572fd3870EC27BD1B43d8Ab2609AFA07c
+
 
 # W2_1作业：
 

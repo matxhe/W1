@@ -7,9 +7,9 @@ import GGToken from './artifacts/contracts/GGToken.sol/GGToken.json';
 import Vault from './artifacts/contracts/Vault.sol/Vault.json';
 import GGNFT from './artifacts/contracts/GGNFT.sol/GGNFT.json';
 
-const tokenContractAddress = "0x68B1D87F95878fE05B998F19b66F4baba5De1aed";
-const vaultContractAddress = "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c";
-const erc721ContractAddress = "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d";
+const tokenContractAddress = "0xED580c3bA68242B0A9906910B7AeA5b4ea5F2Fe0";
+const vaultContractAddress = "0xD520a6394628149B607b35f75e6321F19FbbAca7";
+const erc721ContractAddress = "0x310c83E572fd3870EC27BD1B43d8Ab2609AFA07c";
 
 
 function App() {
