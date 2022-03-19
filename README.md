@@ -1,5 +1,62 @@
 # 欧科定向培训作业
 
+
+# W4_1作业
+* 部署自己的 ERC20 合约 MyToken
+* 编写合约 MyTokenMarket 实现：
+   * AddLiquidity():函数内部调用 UniswapV2Router 添加 MyToken 与 ETH 的流动性
+   * buyToken()：用户可调用该函数实现购买 MyToken
+
+npx hardhat run .\scripts\deploy.js --network dev
+
+GGToken deployed to: 0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82
+
+MyTokenMarket deployed to: 0x9A676e781A523b5d0C0e43731313A708CB607508
+
+add liquidity to market(100000 GG tokens, 100 ETH) done, trx hash: 0x0522babede7b3209a6d9c6c309b70dd1b5c17e963e1dde633d6f9b26c229188f
+
+Owner token holdings before buy:0.0
+
+Owner token holdings after bought:9066.108938801491315813   
+   
+
+# W4_2作业
+* 在上一次作业的基础上：
+   * 完成代币兑换后，直接质押 MasterChef
+   * withdraw():从 MasterChef 提取 Token 方法   
+   
+npx hardhat run .\scripts\deploy.js --network dev
+
+Compiled 15 Solidity files successfully
+
+GGToken deployed to: 0xed12bE400A07910E4d4E743E4ceE26ab1FC9a961
+
+SushiToken deployed to: 0x1B25157F05B25438441bF7CDe38A95A55ccf8E50
+
+MasterChef deployed to: 0xc775bF567D67018dfFac4E89a7Cf10f0EDd0Be93
+
+Add new lp to the pool, trx hash: 0xb9c7b71976b9aa8ccc385f36d0cbf3f7f8dc11ce695db8fab2641554bfbc9199
+
+MasterChef poolInfo: 0xed12bE400A07910E4d4E743E4ceE26ab1FC9a961
+
+MyTokenMarket deployed to: 0xFCa5Bb3732185AE6AaFC65aD8C9A4fBFf21DbaaD
+
+add liquidity to market(100000 GG tokens, 100 ETH) done, trx hash: 0x07f6007473efdd25a22193dd8bac51da2f064ac52ba44e40f7d3101d5b9925b5
+
+Owner token balance before buy:0.0
+
+swap ETH => Token & deposit to masterChef done, trx hash: 0xbc018255ec4476e56ee1be22a2e6fc3f65c3accf12527b83bf3af751c2e070e8
+
+Owner token balance after swap:0.0
+
+withdraw Token from masterChef done, trx hash: 0x9da9695941277094e8005915f6059593d854a5faf1484cac091e0214a552ef2b
+
+Owner token balance after withdraw from masterChef:9066.108938801491315813
+
+Owner sushi balance(reward) after withdraw from masterChef:9999.999999997790306446
+   
+——————————————————————————————————————————————
+
 # W3作业：
 
 ## Introduction
@@ -23,8 +80,11 @@
 部署到ropsten， https://ropsten.etherscan.io/address/0xd21edeaa807a072ee96b97a39b351499355ae93c
 
 npx hardhat run .\scripts\deploy.js --network ropsten
+
          GGToken deployed to: 0xED580c3bA68242B0A9906910B7AeA5b4ea5F2Fe0
+		 
          Vault deployed to: 0xD520a6394628149B607b35f75e6321F19FbbAca7
+		 
          GG NFT deployed to: 0x310c83E572fd3870EC27BD1B43d8Ab2609AFA07c
 
 
