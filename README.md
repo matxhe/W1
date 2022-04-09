@@ -7,6 +7,69 @@
    * （可选）：可以用期权Token 与 USDT 以一个较低的价格创建交易对，模拟用户购买期权。
    * 行权方法（用户角色）：在到期日当天，可通过指定的价格兑换出标的资产，并销毁期权Token
    * 过期销毁（项目方角色）：销毁所有期权Token 赎回标的。
+   
+* npx hardhat run .\scripts\CallToken-test.js --network hardhat
+
+Compiled 11 Solidity files successfully
+
+Exported deployments into D:\BlockChainTrainning\homework\homework\W6\deployments\hardhat\TokenA.json
+
+TokenA deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+Call Token address:0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+
+owner address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Caller address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+current contract address: 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+
+------------ mint function ------
+block.timestamp: 1649524766
+
+to address: 0x70997970c51812dc3a010c7d01b50e0d17dc79c8
+
+from address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+fromBalance: 20
+
+amount: 10
+
+Call Token balance on 2nd account:10
+
+------------ settlement function ------
+
+block.timestamp: 1658164769
+
+settlementTime + during : 1658251165
+
+to address: 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+
+from address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+fromBalance: 100000000000000000000000
+
+amount: 100
+
+owner address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Caller address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+current contract address: 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+
+to address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+from address: 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+
+fromBalance: 100
+
+amount: 100
+   
+# W6_2作业（可选）
+* 实现⼀个通过 DAO 管理资⾦的Treasury：
+   * 管理员可以从Treasury合约中提取资⾦withdraw（）
+   * 治理Gov合约作为管理员
+   * 通过发起提案从Treasury合约资⾦
 ——————————————
 # W5_1作业
 * 以太坊测试网上部署两个自己的ERC20合约MyToken，分别在Uniswap V2、V3(网页上)添加流动性
