@@ -24,10 +24,10 @@
 * 部署自己的 ERC20 合约 MyToken
 * 编写合约 MyTokenMarket 实现：
    * AddLiquidity():函数内部调用 UniswapV2Router 添加 MyToken 与 ETH 的流动性
-   主要注意点：添加流动性时要先调用myToken.approve授权给UniswapV2Router
+   * 主要注意点：添加流动性时要先调用myToken.approve授权给UniswapV2Router
    
    * buyToken()：用户可调用该函数实现购买 MyToken
-   主要注意点：调用IUniswapV2Router01.swapExactETHForTokens 传入ETH兑换MyToken
+   * 主要注意点：调用IUniswapV2Router01.swapExactETHForTokens 传入ETH兑换MyToken
 
 npx hardhat run .\scripts\deploy.js --network dev
 
@@ -45,12 +45,12 @@ Owner token holdings after bought:9066.108938801491315813
 # W4_2作业
 * 在上一次作业的基础上：
    * 完成代币兑换后，直接质押 MasterChef
-   主要实现思路与注意点：1. 完成代币兑换后要先调用myToken.approve授权给MasterChef
+   * 主要实现思路与注意点：1. 完成代币兑换后要先调用myToken.approve授权给MasterChef
 					2. 代币兑换后先到MyTokenMarket而不是用户地址
 					3. 然后从MyTokenMarket调用MasterChef.Deposit存入
 			
-   * withdraw():从 MasterChef 提取 Token 方法   
-   主要实现思路与注意点：1. 从MyTokenMarket调用MasterChe.withdraw提取到MyTokenMarket
+   * withdraw():从 MasterChef 提取 Token 方法
+   * 主要实现思路与注意点：1. 从MyTokenMarket调用MasterChe.withdraw提取到MyTokenMarket
 					2. 授权MyTokenMarket转出LP代币与SuShi奖励（Reward）
 					3. 传回LP代币与Sushi给用户
 					
