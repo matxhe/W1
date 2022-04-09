@@ -1,5 +1,24 @@
 # 欧科定向培训作业
 
+# W6_1作业
+* 设计一个看涨期权Token:
+   * 创建期权Token 时，确认标的的价格与行权日期；
+   * 发行方法（项目方角色）：根据转入的标的（ETH）发行期权Token；
+   * （可选）：可以用期权Token 与 USDT 以一个较低的价格创建交易对，模拟用户购买期权。
+   * 行权方法（用户角色）：在到期日当天，可通过指定的价格兑换出标的资产，并销毁期权Token
+   * 过期销毁（项目方角色）：销毁所有期权Token 赎回标的。
+——————————————
+# W5_1作业
+* 以太坊测试网上部署两个自己的ERC20合约MyToken，分别在Uniswap V2、V3(网页上)添加流动性
+* 作业：编写合约执行闪电贷（参考V2的ExampleFlashSwap）：
+   * uniswapV2Call中，用收到的 TokenA 在 Uniswap V3 的 SwapRouter 兑换为 TokenB 还回到 uniswapV2 Pair 中。
+   
+# W5_2作业
+* 在一笔交易中完成（模拟闪电贷交易）
+   * 在 AAVE 中借款 token A
+   * 使用 token A 在 Uniswap V2 中交易兑换 token B，然后在 Uniswap V3 token B 兑换为 token A
+   * token A 还款给 AAVE
+————————————————————————————————
 
 # W4_1作业
 * 部署自己的 ERC20 合约 MyToken
